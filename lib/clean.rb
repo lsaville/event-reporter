@@ -21,4 +21,8 @@ module Clean #this will be 'included' in the load bit
     return phone
   end
 
+  def self.name(name)
+    name.strip
+  end
+
 end
