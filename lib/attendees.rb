@@ -2,9 +2,12 @@ require 'csv'
 require './lib/clean'
 require './lib/queue'
 
-class Attendees < Queue
+class Attendees
   include Clean
-  attr_reader :contents
+  attr_reader :contents, :q
+  def intitialize
+    @q = Queue.new
+  end
 
   def load(file='event_attendees.csv')
     @contents = CSV.read file, headers: true, header_converters: :symbol
@@ -15,7 +18,7 @@ class Attendees < Queue
     attribute = attribute.to_sym
     results = []
     contents.each do |row|
-      results << row.to_s.chomp if row[attribute] == criteria
+      results << row if row[attribute] == criteria
     end
     return results
   end
