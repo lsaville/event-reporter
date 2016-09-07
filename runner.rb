@@ -3,10 +3,9 @@ require './lib/attendee'
 require './lib/clean'
 require './lib/queue'
 require './lib/phrase'
-q = Queue.new
+
 attendees = Attendees.new
 attendees.load
-attendees.assign_attendees
 phrase = Phrase.new
 
 lines = "--------------------------------------------------------"

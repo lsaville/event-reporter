@@ -23,7 +23,6 @@ class AttendeesTest < Minitest::Test
   def test_attendees_is_an_array_with_attendee_objects
     sample = Attendees.new
     sample.load
-    sample.assign_attendees
 
     assert_equal Array, sample.attendees.class
     assert_equal 19, sample.attendees.length
@@ -33,8 +32,6 @@ class AttendeesTest < Minitest::Test
   def test_it_can_find_something
     sample = Attendees.new
     sample.load
-    sample.assign_attendees
-    require "pry"; binding.pry
     sample.find("zipcode", "98122")
     assert_equal 2, sample.q.count
   end

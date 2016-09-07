@@ -34,13 +34,3 @@ end
 # example.assign_attendees
 # require "pry"; binding.pry
 # puts example.attendees
-
-
-# def clean(stuff)
-#   stuff.each do |row|
-#     row[:zipcode] = Clean.zipcode(row[:zipcode])
-#     row[:homephone] = Clean.phone(row[:homephone])
-#     row[:first_name] = Clean.name(row[:first_name])
-#     row[:last_name] = Clean.name(row[:last_name])
-#   end
-# end

@@ -5,19 +5,19 @@ class Queue
   end
 
   def enqueue(thing)
-    @queue << thing
+    queue << thing
   end
 
   def dequeue
-    @queue.shift
+    queue.shift
   end
 
   def count
-    @queue.length
+    queue.length
   end
 
   def empty?
-    @queue.empty?
+    queue.empty?
   end
 
   def clear
