@@ -1,5 +1,5 @@
 class Queue
-  attr_reader :queue
+  attr_accessor :queue
   def initialize
     @queue = []
   end
