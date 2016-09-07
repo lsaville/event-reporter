@@ -10,4 +10,6 @@ class PrintTest < Minitest::Test
   end
 
   def test_initiates_with_kn
+    skip
+  end
 end

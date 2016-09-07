@@ -1,4 +1,4 @@
-require 'queue'
+require './lib/que'
 
 class Print
 
@@ -14,5 +14,5 @@ header7 = "ADDRESS"
 header8 = "PHONE"
 header9 = "DISTRICT"
 #{sprintf("%20s", header)}
-headers = "#{sprintf("%-20s", header1)}#{sprintf("%-20s", header2)}#{sprintf("%-20s", header3)}#{sprintf("%-20s", header4)}#{sprintf("%-20s", header5)}#{sprintf("%-20s", header6)}#{sprintf("%-20s", header7)}#{sprintf("%-20s", header8)}#{sprintf("%-20s", header9)}"
+template = "#{sprintf("%-12s", item1)}#{sprintf("%-14s", item2)}#{sprintf("%-38s", c)}#{sprintf("%-10s", header4)}#{sprintf("%-20s", header5)}#{sprintf("%-10s", header6)}#{sprintf("%-50s", header7)}#{sprintf("%-13s", header8)}#{sprintf("%-5s", header9)}"
 item1 = attendee.first_name

@@ -1,7 +1,7 @@
 require './lib/attendees'
 require './lib/attendee'
 require './lib/clean'
-require './lib/queue'
+require './lib/que'
 require './lib/phrase'
 
 attendees = Attendees.new

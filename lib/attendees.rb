@@ -1,13 +1,13 @@
 require 'csv'
 require './lib/clean'
-require './lib/queue'
+require './lib/que'
 require './lib/attendee'
 
 class Attendees
   include Clean
   attr_reader :contents, :q, :attendees
   def initialize
-    @q = Queue.new
+    @q = Que.new
   end
 
   def load(file='event_attendees.csv')
@@ -24,7 +24,7 @@ class Attendees
   def find(attribute, criteria)
     @q.clear
     @attendees.each do |attendee|
-      @q.enqueue(attendee) if attendee.send(attribute) == criteria
+      @q.enque(attendee) if attendee.send(attribute) == criteria
     end
   end
 
