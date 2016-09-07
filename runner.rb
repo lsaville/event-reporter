@@ -70,6 +70,7 @@ until quit do
       attendees.load
     else
       attendess.load(answer[1])
+    end
   when "find"
     #call the find method with [1] and [2] as arugments
   when 'quit'
