@@ -1,9 +1,12 @@
 require './lib/attendees'
+require './lib/attendee'
 require './lib/clean'
 require './lib/queue'
 require './lib/phrase'
 q = Queue.new
 attendees = Attendees.new
+attendees.load
+attendees.assign_attendees
 phrase = Phrase.new
 
 lines = "--------------------------------------------------------"
@@ -43,12 +46,31 @@ until quit do
       end
     end
   when "queue"
-    #check the next argument and do the shit based on that
-    #should handle 6 things:
-
+    if answer.length == 2
+      case answer[1]
+      when "count"
+        puts q.count
+      when "clear"
+        q.clear
+      when "district"
+        puts "coming soon"
+      when "print"
+        puts "print"
+      end
+    elsif answer.length == 3
+      if answer[2] == "by"
+        puts "print by attribute coming soon"
+      elsif answer[1] == "save"
+        puts "saving coming soon"
+      elsif answer[1] == "export"
+        puts "export coming soon"
+      end
+    end
   when "load"
-    #check for filename or call load to default to event_attendees
-    #should handle 1 thing
+    if answer.length == 1
+      attendees.load
+    else
+      attendess.load(answer[1])
   when "find"
     #call the find method with [1] and [2] as arugments
   when 'quit'

@@ -12,6 +12,7 @@ class Attendees
 
   def load(file='event_attendees.csv')
     @contents = CSV.read file, headers: true, header_converters: :symbol
+    assign_attendees
   end
 
   def assign_attendees
