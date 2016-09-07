@@ -32,11 +32,11 @@ class AttendeesTest < Minitest::Test
 
   def test_it_can_find_something
     sample = Attendees.new
-    require "pry"; binding.pry
     sample.load
     sample.assign_attendees
+    require "pry"; binding.pry
     sample.find("zipcode", "98122")
-    assert_equal 2, sample.results.length
+    assert_equal 2, sample.q.count
   end
 
 end

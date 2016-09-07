@@ -12,6 +12,6 @@ class Attendee
     @city = row[:city]
     @state = row[:state]
     @zipcode = Clean.zipcode(row[:zipcode])
-    @reg_date = row[:RegDate]
+    @reg_date = row[:regdate]
   end
 end

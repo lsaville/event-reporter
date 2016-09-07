@@ -6,7 +6,7 @@ require './lib/attendee'
 class Attendees
   include Clean
   attr_reader :contents, :q, :attendees
-  def intitialize
+  def initialize
     @q = Queue.new
   end
 
@@ -21,6 +21,7 @@ class Attendees
   end
 
   def find(attribute, criteria)
+    @q.clear
     @attendees.each do |attendee|
       @q.enqueue(attendee) if attendee.send(attribute) == criteria
     end
@@ -30,7 +31,7 @@ end
 # example = Attendees.new
 # example.load
 # example.assign_attendees
-# # require "pry"; binding.pry
+# require "pry"; binding.pry
 # puts example.attendees
 
 
