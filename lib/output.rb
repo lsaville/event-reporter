@@ -1,18 +1,10 @@
 require './lib/que'
 
-class Print
+class Output
   attr_reader :headers
+
   def headers
-    item1 = "LAST NAME"
-    item2 = "FIRST NAME"
-    item3 = "EMAIL"
-    item4 = "ZIPCODE"
-    item5 = "CITY"
-    item6 = "STATE"
-    item7 = "ADDRESS"
-    item8 = "PHONE"
-    item9 = "DISTRICT"
-    puts "#{sprintf("%-12s", item1)}#{sprintf("%-14s", item2)}#{sprintf("%-38s", item3)}#{sprintf("%-10s", item4)}#{sprintf("%-20s", item5)}#{sprintf("%-10s", item6)}#{sprintf("%-50s", item7)}#{sprintf("%-13s", item8)}#{sprintf("%-5s", item9)}"
+    puts "#{sprintf("%-12s", "LAST NAME")}#{sprintf("%-14s", "FIRST NAME")}#{sprintf("%-38s", "EMAIL")}#{sprintf("%-10s", "ZIPCODE")}#{sprintf("%-20s", "CITY")}#{sprintf("%-10s", "STATE")}#{sprintf("%-50s", "ADDRESS")}#{sprintf("%-13s", "PHONE")}#{sprintf("%-5s", "DISTRICT")}"
   end
 
   def people(set)
@@ -32,5 +24,9 @@ class Print
   end
 
   def people_by(set, attribute)
-    
+    print_set = set.sort_by do |attendee|
+      attendee.send(attribute)
+    end
+    people(print_set)
+  end
 end

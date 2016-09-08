@@ -1,7 +1,7 @@
 require './lib/clean'
 require './lib/que'
 require './lib/attendee'
-require './lib/print'
+require './lib/output'
 require 'csv'
 require 'open-uri'
 require 'json'
@@ -11,7 +11,7 @@ class Attendees
   attr_reader :contents, :q, :attendees, :print
   def initialize
     @q = Que.new
-    @p = Print.new
+    @output = Output.new
   end
 
   def load(file='event_attendees.csv')
@@ -25,7 +25,7 @@ class Attendees
     end
   end
 
-  def find(attribute, criteria)
+  def find(attribute, criteria) #needs to be case insensitive!!!
     @q.clear
     @attendees.each do |attendee|
       @q.enque(attendee) if attendee.send(attribute) == criteria
@@ -39,20 +39,21 @@ class Attendees
       data = JSON.parse(open(url).read)
       attendee.district = data["results"][0]["district"]
     end
-    require "pry"; binding.pry
   end
 
   def print
-    @p.people(q.que)
+    @output.people(q.que)
   end
 
-  def print_by
+  def print_by(attribute)
+    @output.people_by(q.que, attribute)
   end
 
 end
-example = Attendees.new
-example.load
-example.find("zipcode", "98122")
-example.find_district
-# require "pry"; binding.pry
-example.print
+# example = Attendees.new
+# example.load
+# example.find("zipcode", "98122")
+# example.find_district
+# # require "pry"; binding.pry
+# example.print
+# example.print_by("first_name")

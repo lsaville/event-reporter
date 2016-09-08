@@ -1,12 +1,12 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/print'
+require './lib/output'
 
-class PrintTest < Minitest::Test
+class OutputTest < Minitest::Test
 
   def test_it_exists
-    printer = Print.new
-    assert_instance_of Print, printer
+    printer = Output.new
+    assert_instance_of Output, printer
   end
 
   def test_initiates_with_kn

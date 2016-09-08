@@ -2,8 +2,9 @@ require './lib/attendees.rb'
 require './lib/phrase.rb'
 
 class Repl
-  attr_reader :run, :argv, :command
+  attr_reader :run, :argv, :command, :attendees, :command, :attribute, :criteria1, :criteria2, :criteria3
   def initialize
+    @attendees = Attendees.new
     @argv = ""
     @command = ""
     @attribute = ""
@@ -15,23 +16,25 @@ class Repl
   def run
     puts "Welcome to Event Reporter"
     lines = '------------------------------------------'
-    argv = ''
-    until argv == "quit"
+    input = ''
+    until input == "quit"
       puts lines
       puts "What would you like to do?"
       puts lines
-      argv = gets.chomp
-      assign_answer(argv)
+      input = gets.chomp
+      assign_answer(input)
       delegate
+      # require "pry"; binding.pry
     end
   end
 
-  def assign_answer(argv)
-    @argv = argv.split
-    command = argv[0]
-    attribute = argv[1]
-    criteria1 = argv[2]
-    criteria2 = argv[3]
+  def assign_answer(input)
+    @argv = input.split
+    @command = argv[0]
+    @attribute = argv[1]
+    @criteria1 = argv[2]
+    @criteria2 = argv[3]
+    @criteria3 = argv[4]
   end
 
   def delegate
@@ -44,13 +47,16 @@ class Repl
       queue
     when "find"
       find
-    when "quit"
-      quit
+    when "check"
+      check
     end
   end
 
+  def check
+    require "pry"; binding.pry
+  end
+
   def load
-    attendees = Attendees.new
     if argv.length == 1
       attendees.load
     else
@@ -61,7 +67,7 @@ class Repl
   def queue
     if argv.length == 2
       queue_simple
-    elsif argv.length == 3
+    elsif argv.length >= 3
       queue_compound
     end
   end
@@ -75,23 +81,35 @@ class Repl
     when "district"
       attendees.find_district
     when "print"
-      output.headers #doesn't work yet
+      attendees.print
     end
   end
 
   def queue_compound
-
+    #print by <attr>
+    #save to <file>
+    #export html <file>
   end
-  # elsif answer.length == 3
-  #   if answer[2] == "by"
-  #     puts "print by attribute coming soon"
-  #   elsif answer[1] == "save"
-  #     puts "saving coming soon"
-  #   elsif answer[1] == "export"
-  #     puts "export coming soon"
-  #   end
-  # end
+
+  def find
+    require "pry"; binding.pry
+    attendees.find(attribute, criteria1)
+    if attribute == 'first' || attribute == 'last'
+      attendees.find(format_name, criteria2)
+    elsif attribute == 'city'
+      attendees.find(attribute, format_city)
+    end
+  end
+
+  def format_name
+    formatted = [attribute, criteria1].join('_')
+  end
+
+  def format_city
+    formatted = argv[2..-1].join(' ')
+  end
+
+
 end
 repl = Repl.new
 repl.run
-require "pry"; binding.pry
