@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Queue Print</title>
+  </head>
+  <body>
+    <h1>Thanks for using Event Manager!</h1>
+    <table>
+      <tr><th>LAST NAME</th><th>FIRST NAME</th><th>EMAIL</th><th>ZIPCODE</th><th>CITY</th><th>STATE</th><th>ADDRESS</th><th>PHONE</th><th>DISTRICT</th></tr>
+        <% set.each do |attendee| %>
+          <tr>
+            <td><%= "#{attendee.last_name}" %></td>
+            <td><%= "#{attendee.first_name}" %></td>
+            <td><%= "#{attendee.email}" %></td>
+            <td><%= "#{attendee.zipcode}" %></td>
+            <td><%= "#{attendee.city}" %></td>
+            <td><%= "#{attendee.state}" %></td>
+            <td><%= "#{attendee.street}" %></td>
+            <td><%= "#{attendee.phone}" %></td>
+            <td><%= "#{attendee.district}" %></td>
+          </tr>
+        <% end %>
+    </table>
+
+  </body>
+
+</html>

@@ -65,6 +65,7 @@ class Repl
   end
 
   def queue
+    require "pry"; binding.pry
     if argv.length == 2
       queue_simple
     elsif argv.length >= 3
@@ -86,9 +87,14 @@ class Repl
   end
 
   def queue_compound
-    #print by <attr>
-    #save to <file>
-    #export html <file>
+    require "pry"; binding.pry
+    if attribute == "export"
+      attendees.output_html(criteria2)
+    elsif attribute == "save"
+      attendees.output_csv(criteria2)
+    elsif attribute == "print"
+      attendees.print_by(criteria3)
+    end
   end
 
   def find
