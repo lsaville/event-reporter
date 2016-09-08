@@ -2,7 +2,8 @@ require './lib/clean'
 
 class Attendee
   include Clean
-  attr_reader :first_name, :last_name, :email, :phone, :street, :city, :state, :zipcode, :reg_date, :district
+  attr_accessor :district
+  attr_reader :first_name, :last_name, :email, :phone, :street, :city, :state, :zipcode, :reg_date
   def initialize(row)
     @first_name = Clean.name(row[:first_name])
     @last_name = Clean.name(row[:last_name])

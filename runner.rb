@@ -3,10 +3,13 @@ require './lib/attendee'
 require './lib/clean'
 require './lib/que'
 require './lib/phrase'
+require './lib/print'
+require './lib/district'
 
 attendees = Attendees.new
 attendees.load
 phrase = Phrase.new
+output = Print.new
 
 lines = "--------------------------------------------------------"
 
@@ -21,6 +24,7 @@ until quit do
   answer = gets.chomp.split
   case answer[0]
   when "help"
+
     if answer.length == 1
       phrase.help
     elsif answer.length == 2 && answer[1] == "load"
@@ -44,17 +48,19 @@ until quit do
         phrase.queue_print
       end
     end
+
   when "queue"
     if answer.length == 2
       case answer[1]
       when "count"
-        puts q.count
+        puts attendees.q.count
+
       when "clear"
-        q.clear
+        attendees.q.clear
       when "district"
-        puts "coming soon"
+        attendees.find_district
       when "print"
-        puts "print"
+        output.headers
       end
     elsif answer.length == 3
       if answer[2] == "by"
@@ -65,14 +71,18 @@ until quit do
         puts "export coming soon"
       end
     end
+
+
   when "load"
     if answer.length == 1
       attendees.load
     else
       attendess.load(answer[1])
     end
+
+
   when "find"
-    #call the find method with [1] and [2] as arugments
+    attendees.find(answer[1], answer[2])#call the find method with [1] and [2] as arugments
   when 'quit'
     quit = true
   else

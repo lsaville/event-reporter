@@ -1,4 +1,5 @@
 class Que
+  attr_reader :enque, :deque, :count, :empty, :clear
   attr_accessor :que
   def initialize
     @que = []
@@ -13,7 +14,7 @@ class Que
   end
 
   def count
-    que.length
+    @que.length
   end
 
   def empty?
