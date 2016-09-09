@@ -4,7 +4,7 @@ module Clean #this will be 'included' in the load bit
   end
 
   def self.phone(phone)
-    phone = phone.gsub(/[^0-9]/, '')
+    phone = phone.to_s.gsub(/[^0-9]/, '')
     if phone.length == 11 #missing edge case 11 digits starting with !1
       phone = phone[1..-1]
     elsif phone.length > 11
@@ -16,7 +16,10 @@ module Clean #this will be 'included' in the load bit
   end
 
   def self.name(name)
-    name.strip
+    name.to_s.strip
   end
 
+  def self.thing(thing)
+    thing.to_s
+  end
 end

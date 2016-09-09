@@ -7,13 +7,13 @@ class Attendee
   def initialize(row)
     @first_name = Clean.name(row[:first_name])
     @last_name = Clean.name(row[:last_name])
-    @email = row[:email_address]
+    @email = Clean.thing(row[:email_address])
     @phone = Clean.phone(row[:homephone])
-    @street = row[:street]
-    @city = row[:city]
-    @state = row[:state]
+    @street = Clean.thing(row[:street])
+    @city = Clean.thing(row[:city])
+    @state = Clean.thing(row[:state])
     @zipcode = Clean.zipcode(row[:zipcode])
-    @reg_date = row[:regdate]
+    @reg_date = Clean.thing(row[:regdate])
     @district = ""
   end
 end

@@ -3,11 +3,6 @@ require "minitest/pride"
 require "./lib/clean"
 
 class CleanTest < Minitest::Test
-  def test_it_exists
-    skip
-    assert_instance_of 'stuff', Clean
-  end
-
   def test_it_cleans_zipcodes
     assert_equal "00000", Clean.zipcode(nil)
     assert_equal "00234", Clean.zipcode("234")
@@ -23,11 +18,17 @@ class CleanTest < Minitest::Test
     assert_equal "7782327000", Clean.phone("778.232.7000")
     assert_equal "5309193000", Clean.phone("530-919-3000")
     assert_equal "8584053000", Clean.phone("858 405 3000")
+    assert_equal "0000000000", Clean.phone(nil)
   end
 
   def test_it_cleans_names
     assert_equal "Mary", Clean.name("  Mary")
     assert_equal "Mary", Clean.name("Mary     ")
     assert_equal "Mary", Clean.name("   Mary   ")
+    assert_equal "", Clean.name(nil)
+  end
+
+  def test_it_cleans_nils
+    assert_equal "", Clean.thing(nil)
   end
 end
