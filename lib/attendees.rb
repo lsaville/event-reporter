@@ -2,6 +2,7 @@ require './lib/clean'
 require './lib/que'
 require './lib/attendee'
 require './lib/output'
+require './lib/district'
 require 'csv'
 require 'open-uri'
 require 'json'
@@ -25,7 +26,8 @@ class Attendees
     end
   end
 
-  def find(attribute, criteria) #needs to be case insensitive!!!
+  def find(attribute, criteria)
+    require "pry"; binding.pry
     @q.clear
     @attendees.each do |attendee|
       @q.enque(attendee) if attendee.send(attribute).upcase == criteria.upcase
@@ -33,14 +35,8 @@ class Attendees
   end
 
   def find_district
-    if @q.que.length < 10
-      @q.que.each do |attendee|
-        zipcode = attendee.zipcode
-        url = "https://congress.api.sunlightfoundation.com/districts/locate?zip=#{zipcode}&apikey=3321d49851c347e284a0c20c2c73f2d4"
-        data = JSON.parse(open(url).read)
-        attendee.district = data["results"][0]["district"]
-      end
-    end
+    district = District.new
+    district.find_district(q.que)
   end
 
   def print

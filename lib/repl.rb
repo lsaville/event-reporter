@@ -98,16 +98,17 @@ class Repl
   end
 
   def find
-    require "pry"; binding.pry
-    attendees.find(attribute, criteria1)
     if attribute == 'first' || attribute == 'last'
       attendees.find(format_name, criteria2)
     elsif attribute == 'city'
       attendees.find(attribute, format_city)
+    else
+      attendees.find(attribute, criteria1)
     end
   end
 
   def format_name
+    require "pry"; binding.pry
     formatted = [attribute, criteria1].join('_')
   end
 
