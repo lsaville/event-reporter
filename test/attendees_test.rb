@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+require './test/test_helper'
 require './lib/attendees'
 
 class AttendeesTest < Minitest::Test
@@ -35,5 +34,16 @@ class AttendeesTest < Minitest::Test
     sample.find("zipcode", "98122")
     assert_equal 2, sample.q.count
   end
+
+  def test_it_can_grab_district_info
+    sample = Attendees.new
+    sample.load
+    sample.find("zipcode", "98122")
+    sample.find_district
+
+    assert_equal 7, sample.q.que[0].district
+    assert_equal 7, sample.q.que[1].district
+  end
+
 
 end

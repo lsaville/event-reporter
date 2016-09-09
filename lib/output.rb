@@ -27,7 +27,7 @@ class Output
 
   def people_by(set, attribute)
     print_set = set.sort_by do |attendee|
-      attendee.send(attribute).upcase
+      attendee.send(attribute)
     end
     people(print_set)
   end

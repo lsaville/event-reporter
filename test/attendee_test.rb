@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+require './test/test_helper'
 require './lib/attendee'
 
 class AttendeeTest < Minitest::Test
@@ -32,9 +31,8 @@ class AttendeeTest < Minitest::Test
   end
 
   def test_no_nils
-    sample = {first_name: nil, last_name: nil email_address: nil, homephone: nil, street: nil, city: nil, state: nil, zipcode: nil, regdate: nil}
+    sample = {first_name: nil, last_name: nil, email_address: nil, homephone: nil, street: nil, city: nil, state: nil, zipcode: nil, regdate: nil}
     person = Attendee.new(sample)
-
     assert_equal "", person.first_name
     assert_equal "", person.last_name
     assert_equal "", person.email
@@ -43,6 +41,7 @@ class AttendeeTest < Minitest::Test
     assert_equal "", person.city
     assert_equal "", person.state
     assert_equal "00000", person.zipcode
-    assert_equal "", reg_date
-    
+    assert_equal "", person.reg_date
+  end
+
 end

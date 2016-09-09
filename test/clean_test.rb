@@ -1,5 +1,4 @@
-require "minitest/autorun"
-require "minitest/pride"
+require "./test/test_helper"
 require "./lib/clean"
 
 class CleanTest < Minitest::Test
@@ -14,6 +13,7 @@ class CleanTest < Minitest::Test
     assert_equal "3036978278", Clean.phone("(303)6978278")
     assert_equal "9419792000", Clean.phone("(941)979-2000")
     assert_equal "4018685000", Clean.phone("14018685000")
+    assert_equal "0000000000", Clean.phone("0914801041932104109")
     assert_equal "0000000000", Clean.phone("9.82E+00")
     assert_equal "7782327000", Clean.phone("778.232.7000")
     assert_equal "5309193000", Clean.phone("530-919-3000")

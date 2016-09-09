@@ -27,7 +27,6 @@ class Attendees
   end
 
   def find(attribute, criteria)
-    require "pry"; binding.pry
     @q.clear
     @attendees.each do |attendee|
       @q.enque(attendee) if attendee.send(attribute).upcase == criteria.upcase

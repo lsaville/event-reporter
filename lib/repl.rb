@@ -24,7 +24,6 @@ class Repl
       input = gets.chomp
       assign_answer(input)
       delegate
-      # require "pry"; binding.pry
     end
   end
 
@@ -65,7 +64,6 @@ class Repl
   end
 
   def queue
-    require "pry"; binding.pry
     if argv.length == 2
       queue_simple
     elsif argv.length >= 3
@@ -87,7 +85,6 @@ class Repl
   end
 
   def queue_compound
-    require "pry"; binding.pry
     if attribute == "export"
       attendees.output_html(criteria2)
     elsif attribute == "save"
