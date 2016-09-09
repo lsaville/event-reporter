@@ -55,10 +55,3 @@ class Attendees
   end
 
 end
-# example = Attendees.new
-# example.load
-# example.find("zipcode", "98122")
-# example.find_district
-# require "pry"; binding.pry
-# example.print
-# example.print_by("first_name")

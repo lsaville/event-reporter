@@ -1,11 +1,11 @@
-module Clean #this will be 'included' in the load bit
+module Clean
   def self.zipcode(zipcode)
     zipcode.to_s.rjust(5, "0")[0,5]
   end
 
   def self.phone(phone)
     phone = phone.to_s.gsub(/[^0-9]/, '')
-    if phone.length == 11 #missing edge case 11 digits starting with !1
+    if phone.length == 11 
       phone = phone[1..-1]
     elsif phone.length > 11
       phone = "0000000000"

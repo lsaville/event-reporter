@@ -47,13 +47,7 @@ class Repl
       queue
     when "find"
       find
-    when "check"
-      check
     end
-  end
-
-  def check
-    require "pry"; binding.pry
   end
 
   def load
