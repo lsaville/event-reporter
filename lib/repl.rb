@@ -15,7 +15,7 @@ class Repl
   end
 
   def run
-    puts "Welcome to Event Reporter"
+    puts "\nWelcome to Event Reporter"
     lines = "------------------------------------------"
     input = ''
     until input == "quit"
@@ -91,7 +91,7 @@ class Repl
     elsif attribute == "save"
       attendees.output_csv(criteria2)
     elsif attribute == "print"
-      attendees.print_by(criteria3)
+      attendees.print_by(criteria2)
     end
   end
 
@@ -106,7 +106,6 @@ class Repl
   end
 
   def format_name
-    require "pry"; binding.pry
     formatted = [attribute, criteria1].join('_')
   end
 

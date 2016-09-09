@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-08T20:26:02-06:00">2016-09-08T20:26:02-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-08T21:14:08-06:00">2016-09-08T21:14:08-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">48.89%</span></span>
+    (<span class="covered_percent"><span class="red">46.61%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.54
+       <span class="green">
+         15.07
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>225</b> relevant lines. 
-    <span class="green"><b>110</b> lines covered</span> and
-    <span class="red"><b>115</b> lines missed </span>
+    <b>251</b> relevant lines. 
+    <span class="green"><b>117</b> lines covered</span> and
+    <span class="red"><b>134</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -67,7 +67,7 @@
         <td>35</td>
         <td>22</td>
         <td>13</td>
-        <td>0.7</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -102,11 +102,11 @@
       
       <tr>
         <td class="strong"><a href="#b8cc459564b28a15b293c7ab9c1d05917c3f032e" class="src_link" title="lib/phrase.rb">lib/phrase.rb</a></td>
-        <td class="red strong">52.38 %</td>
-        <td>41</td>
-        <td>21</td>
-        <td>11</td>
-        <td>10</td>
+        <td class="red strong">50.0 %</td>
+        <td>46</td>
+        <td>24</td>
+        <td>12</td>
+        <td>12</td>
         <td>0.5</td>
       </tr>
       
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#eb6e8eec32a949a31b932e488586834cf797d4fe" class="src_link" title="lib/repl.rb">lib/repl.rb</a></td>
-        <td class="red strong">56.76 %</td>
-        <td>119</td>
-        <td>74</td>
-        <td>42</td>
-        <td>32</td>
-        <td>0.7</td>
+        <td class="red strong">49.48 %</td>
+        <td>166</td>
+        <td>97</td>
+        <td>48</td>
+        <td>49</td>
+        <td>38.3</td>
       </tr>
       
     </tbody>
@@ -370,14 +370,14 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">    @q = Que.new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">    @output = Output.new</code>
         </li>
@@ -1361,11 +1361,11 @@
         <div class="source_table" id="b8cc459564b28a15b293c7ab9c1d05917c3f032e">
   <div class="header">
     <h3>lib/phrase.rb</h3>
-    <h4><span class="red">52.38 %</span> covered</h4>
+    <h4><span class="red">50.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <b>24</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
   </div>
   
@@ -1387,232 +1387,262 @@
         <li class="missed" data-hits="0" data-linenumber="3">
           
           
-          <code class="ruby">    puts &quot;here are your choices:\nhelp\nload\nqueue count\nqueue clear\nqueue district\nqueue print\nqueue save to\nqueue export\nfind&quot;</code>
+          <code class="ruby">    puts &quot;******************************************&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;Here are your choices:\nhelp\nload\nfind\nqueue count\nqueue clear\nqueue district\nqueue print\nqueue print by\nqueue save to\nqueue export html&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.load</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">    puts &quot;loads the program with data so you can search it&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nLoads the program with data so you can search it. Optional filename.\nuse:  &#39;load full_attendees.csv&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.queue_count</code>
+          <code class="ruby">  def self.count</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    puts &quot;displays the number of items in the queue&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nDisplays the number of items in the queue\nuse:  &#39;queue count&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.queue_clear</code>
+          <code class="ruby">  def self.clear</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">    puts &quot;clears the current queue&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nClears the current queue.\nuse:  &#39;queue clear&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.queue_district</code>
+          <code class="ruby">  def self.district</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">    puts &quot;if there are less than 10 items in the queue, will fetch district data for those items&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nIf there are less than 10 items in the queue, will fetch district data for those items.\nuse:  &#39;queue district&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.queue_print</code>
+          <code class="ruby">  def self.print</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
-          <code class="ruby">    puts &quot;prints the contents of the queue to the screen&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nPrints the contents of the queue to the screen.\nuse:  &#39;queue print&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.save</code>
+          <code class="ruby">  def self.print_by</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">    puts &quot;save the contents of the queue to your_file_name.csv, filename required as option&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nPrints the contents of the queue sorted by a provided attribute.\nuse:  &#39;queue print by &lt;attribute&gt;&#39;&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.export</code>
+          <code class="ruby">  def self.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="32">
           
           
-          <code class="ruby">    puts &quot;export the contents of the queue to an html file&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nSave the contents of the queue to your_file_name.csv, filename required as option\nuse:  &#39;queue save to &lt;filename.csv&gt;&#39;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.find</code>
+          <code class="ruby">  def self.export</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
-          <code class="ruby">    puts &quot;find works to populate the queue by searching through the data by attribute and criteria&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    puts &quot;\nExport the contents of the queue to an html file, filename required.\nuse:  &#39;queue export html &lt;filename.html&gt;\n&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.help_help</code>
+          <code class="ruby">  def self.find</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
+        <li class="missed" data-hits="0" data-linenumber="40">
           
           
-          <code class="ruby">    puts &quot;you&#39;ve already found it!&quot;</code>
+          <code class="ruby">    puts &quot;\nFind works to populate the queue by searching through the data by attribute and criteria.\nuse:  &#39;find &lt;attribute&gt; &lt;criteria&gt;&#39;\n&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.help_help</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">    puts &quot;\nYou&#39;ve already found it!\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
@@ -1660,8 +1690,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
           <code class="ruby">    @que = []</code>
         </li>
@@ -1805,11 +1835,11 @@
         <div class="source_table" id="eb6e8eec32a949a31b932e488586834cf797d4fe">
   <div class="header">
     <h3>lib/repl.rb</h3>
-    <h4><span class="red">56.76 %</span> covered</h4>
+    <h4><span class="red">49.48 %</span> covered</h4>
     <div>
-      <b>74</b> relevant lines. 
-      <span class="green"><b>42</b> lines covered</span> and
-      <span class="red"><b>32</b> lines missed.</span>
+      <b>97</b> relevant lines. 
+      <span class="green"><b>48</b> lines covered</span> and
+      <span class="red"><b>49</b> lines missed.</span>
     </div>
   </div>
   
@@ -1843,667 +1873,667 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :run, :argv, :command, :attendees, :command, :attribute, :criteria1, :criteria2, :criteria3</code>
+          <code class="ruby">  include Phrase</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">  attr_reader :run, :argv, :command, :attendees, :command, :attribute, :criteria1, :criteria2, :criteria3</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">    @attendees = Attendees.new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">    @argv = &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">    @command = &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">    @attribute = &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">    @criteria1 = &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">    @criteria2 = &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">    @criteria3 = &quot;&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="16">
           
-          <code class="ruby">  def run</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">    puts &quot;Welcome to Event Reporter&quot;</code>
+          <code class="ruby">  def run</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">    lines = &#39;------------------------------------------&#39;</code>
+          <code class="ruby">    puts &quot;Welcome to Event Reporter&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    input = &#39;&#39;</code>
+          <code class="ruby">    lines = &quot;------------------------------------------&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">    until input == &quot;quit&quot;</code>
+          <code class="ruby">    input = &#39;&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
+          <code class="ruby">    until input == &quot;quit&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="284" data-linenumber="22">
+          <span class="hits">284</span>
+          
           <code class="ruby">      puts lines</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="284" data-linenumber="23">
+          <span class="hits">284</span>
           
           <code class="ruby">      puts &quot;What would you like to do?&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="284" data-linenumber="24">
+          <span class="hits">284</span>
           
           <code class="ruby">      puts lines</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="284" data-linenumber="25">
+          <span class="hits">284</span>
           
           <code class="ruby">      input = gets.chomp</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="26">
+          <span class="hits">283</span>
           
           <code class="ruby">      assign_answer(input)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="27">
+          <span class="hits">283</span>
           
           <code class="ruby">      delegate</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="30">
           
-          <code class="ruby">  def assign_answer(input)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
+          <code class="ruby">  def assign_answer(input)</code>
+        </li>
+      
+        <li class="covered" data-hits="283" data-linenumber="32">
+          <span class="hits">283</span>
+          
           <code class="ruby">    @argv = input.split</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="33">
+          <span class="hits">283</span>
           
           <code class="ruby">    @command = argv[0]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="34">
+          <span class="hits">283</span>
           
           <code class="ruby">    @attribute = argv[1]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="35">
+          <span class="hits">283</span>
           
           <code class="ruby">    @criteria1 = argv[2]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="36">
+          <span class="hits">283</span>
           
           <code class="ruby">    @criteria2 = argv[3]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="283" data-linenumber="37">
+          <span class="hits">283</span>
           
           <code class="ruby">    @criteria3 = argv[4]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="39">
           
-          <code class="ruby">  def delegate</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
+          <code class="ruby">  def delegate</code>
+        </li>
+      
+        <li class="covered" data-hits="283" data-linenumber="41">
+          <span class="hits">283</span>
+          
           <code class="ruby">    case command</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">    when &quot;load&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="43">
           
           
           <code class="ruby">      load</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">    when &quot;help&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="44">
+        <li class="missed" data-hits="0" data-linenumber="45">
           
           
           <code class="ruby">      help</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">    when &quot;queue&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
+        <li class="missed" data-hits="0" data-linenumber="47">
           
           
           <code class="ruby">      queue</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">    when &quot;find&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="48">
+        <li class="missed" data-hits="0" data-linenumber="49">
           
           
           <code class="ruby">      find</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">    when &quot;check&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
+        <li class="missed" data-hits="0" data-linenumber="51">
           
           
           <code class="ruby">      check</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
           <code class="ruby">  def check</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="56">
           
           
           <code class="ruby">    require &quot;pry&quot;; binding.pry</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
           <code class="ruby">  def load</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
+        <li class="missed" data-hits="0" data-linenumber="60">
           
           
           <code class="ruby">    if argv.length == 1</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
+        <li class="missed" data-hits="0" data-linenumber="61">
           
           
           <code class="ruby">      attendees.load</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="63">
           
           
           <code class="ruby">      attendees.load(attribute)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="66">
+        <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
           <code class="ruby">  def queue</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="67">
+        <li class="missed" data-hits="0" data-linenumber="68">
           
           
           <code class="ruby">    if argv.length == 2</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
+        <li class="missed" data-hits="0" data-linenumber="69">
           
           
           <code class="ruby">      queue_simple</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="69">
+        <li class="missed" data-hits="0" data-linenumber="70">
           
           
           <code class="ruby">    elsif argv.length &gt;= 3</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="70">
+        <li class="missed" data-hits="0" data-linenumber="71">
           
           
           <code class="ruby">      queue_compound</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="75">
           <span class="hits">1</span>
           
           <code class="ruby">  def queue_simple</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="75">
+        <li class="missed" data-hits="0" data-linenumber="76">
           
           
           <code class="ruby">    case attribute</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">    when &quot;count&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="77">
+        <li class="missed" data-hits="0" data-linenumber="78">
           
           
           <code class="ruby">      puts attendees.q.count</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">    when &quot;clear&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="79">
+        <li class="missed" data-hits="0" data-linenumber="80">
           
           
           <code class="ruby">      attendees.q.clear</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">    when &quot;district&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="81">
+        <li class="missed" data-hits="0" data-linenumber="82">
           
           
           <code class="ruby">      attendees.find_district</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">    when &quot;print&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="83">
+        <li class="missed" data-hits="0" data-linenumber="84">
           
           
           <code class="ruby">      attendees.print</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="85">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
           <code class="ruby">  def queue_compound</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="88">
+        <li class="missed" data-hits="0" data-linenumber="89">
           
           
           <code class="ruby">    if attribute == &quot;export&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
+        <li class="missed" data-hits="0" data-linenumber="90">
           
           
           <code class="ruby">      attendees.output_html(criteria2)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="90">
+        <li class="missed" data-hits="0" data-linenumber="91">
           
           
           <code class="ruby">    elsif attribute == &quot;save&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="91">
+        <li class="missed" data-hits="0" data-linenumber="92">
           
           
           <code class="ruby">      attendees.output_csv(criteria2)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="92">
+        <li class="missed" data-hits="0" data-linenumber="93">
           
           
           <code class="ruby">    elsif attribute == &quot;print&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="94">
           
           
           <code class="ruby">      attendees.print_by(criteria3)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="97">
+        <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
           <code class="ruby">  def find</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="98">
+        <li class="missed" data-hits="0" data-linenumber="99">
           
           
           <code class="ruby">    if attribute == &#39;first&#39; || attribute == &#39;last&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="99">
+        <li class="missed" data-hits="0" data-linenumber="100">
           
           
           <code class="ruby">      attendees.find(format_name, criteria2)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="100">
+        <li class="missed" data-hits="0" data-linenumber="101">
           
           
           <code class="ruby">    elsif attribute == &#39;city&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="101">
+        <li class="missed" data-hits="0" data-linenumber="102">
           
           
           <code class="ruby">      attendees.find(attribute, format_city)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="103">
+        <li class="missed" data-hits="0" data-linenumber="104">
           
           
           <code class="ruby">      attendees.find(attribute, criteria1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="104">
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="105">
+        <li class="never" data-hits="" data-linenumber="106">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="never" data-hits="" data-linenumber="107">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="107">
+        <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
           <code class="ruby">  def format_name</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="108">
+        <li class="missed" data-hits="0" data-linenumber="109">
           
           
           <code class="ruby">    require &quot;pry&quot;; binding.pry</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="109">
+        <li class="missed" data-hits="0" data-linenumber="110">
           
           
           <code class="ruby">    formatted = [attribute, criteria1].join(&#39;_&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="110">
+        <li class="never" data-hits="" data-linenumber="111">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="111">
+        <li class="never" data-hits="" data-linenumber="112">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="112">
+        <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
           <code class="ruby">  def format_city</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="113">
+        <li class="missed" data-hits="0" data-linenumber="114">
           
           
           <code class="ruby">    formatted = argv[2..-1].join(&#39; &#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="115">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="116">
@@ -2512,19 +2542,301 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="117">
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def help</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="118">
+          
+          
+          <code class="ruby">    case argv.length</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">    when 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="120">
+          
+          
+          <code class="ruby">      simple_help</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby">    when 2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="122">
+          
+          
+          <code class="ruby">      double_help</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="124">
+          
+          
+          <code class="ruby">      queue_help</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def simple_help</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="129">
+          
+          
+          <code class="ruby">    Phrase.help</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def double_help</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="133">
+          
+          
+          <code class="ruby">    case attribute</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">    when &quot;help&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="135">
+          
+          
+          <code class="ruby">      Phrase.help_help</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">    when &quot;load&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="137">
+          
+          
+          <code class="ruby">      Phrase.load</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">    when &quot;find&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="139">
+          
+          
+          <code class="ruby">      Phrase.district</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def queue_help</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="144">
+          
+          
+          <code class="ruby">    case criteria1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">    when &quot;count&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="146">
+          
+          
+          <code class="ruby">      Phrase.count</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby">    when &quot;clear&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="148">
+          
+          
+          <code class="ruby">      Phrase.clear</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">    when &quot;district&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="150">
+          
+          
+          <code class="ruby">      Phrase.district</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby">    when &quot;print&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="152">
+          
+          
+          <code class="ruby">      print_help</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">    when &quot;save&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="154">
+          
+          
+          <code class="ruby">      Phrase.save</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">    when &quot;export&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="156">
+          
+          
+          <code class="ruby">      Phrase.export</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def print_help</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="161">
+          
+          
+          <code class="ruby">    argv.length == 4 ? Phrase.print_by : Phrase.print</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="118">
+        <li class="covered" data-hits="1" data-linenumber="165">
           <span class="hits">1</span>
           
           <code class="ruby">repl = Repl.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="119">
+        <li class="covered" data-hits="1" data-linenumber="166">
           <span class="hits">1</span>
           
           <code class="ruby">repl.run</code>

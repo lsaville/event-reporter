@@ -26,6 +26,7 @@ class Output
   end
 
   def people_by(set, attribute)
+    require "pry"; binding.pry
     print_set = set.sort_by do |attendee|
       attendee.send(attribute)
     end
