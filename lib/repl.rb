@@ -2,6 +2,7 @@ require './lib/attendees.rb'
 require './lib/phrase.rb'
 
 class Repl
+  include Phrase
   attr_reader :run, :argv, :command, :attendees, :command, :attribute, :criteria1, :criteria2, :criteria3
   def initialize
     @attendees = Attendees.new
@@ -15,7 +16,7 @@ class Repl
 
   def run
     puts "Welcome to Event Reporter"
-    lines = '------------------------------------------'
+    lines = "------------------------------------------"
     input = ''
     until input == "quit"
       puts lines
@@ -113,6 +114,52 @@ class Repl
     formatted = argv[2..-1].join(' ')
   end
 
+  def help
+    case argv.length
+    when 1
+      simple_help
+    when 2
+      double_help
+    else
+      queue_help
+    end
+  end
+
+  def simple_help
+    Phrase.help
+  end
+
+  def double_help
+    case attribute
+    when "help"
+      Phrase.help_help
+    when "load"
+      Phrase.load
+    when "find"
+      Phrase.district
+    end
+  end
+
+  def queue_help
+    case criteria1
+    when "count"
+      Phrase.count
+    when "clear"
+      Phrase.clear
+    when "district"
+      Phrase.district
+    when "print"
+      print_help
+    when "save"
+      Phrase.save
+    when "export"
+      Phrase.export
+    end
+  end
+
+  def print_help
+    argv.length == 4 ? Phrase.print_by : Phrase.print
+  end
 
 end
 repl = Repl.new
